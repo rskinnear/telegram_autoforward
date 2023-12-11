@@ -17,7 +17,7 @@ from shifts import get_shift_from_timestamp
 
 load_dotenv()
 TOKEN: str | None = os.getenv("BOT_TOKEN")
-TOP_CHAT_USERNAME: str = ""
+GROUP_USERNAME: str = ""
 
 dp = Dispatcher()
 
@@ -40,7 +40,7 @@ async def command_start_handler(message: Message) -> None:
     This handler receives messages with `/start` command
     """
     await message.answer(
-        f"Hello, {hbold(message.from_user.full_name)}! I will listen to messages in TOP and forward them here."
+        f"Hello, {hbold(message.from_user.full_name)}! I will listen to messages in the Telegram group and forward them here."
     )
 
     if message.from_user:
@@ -92,7 +92,7 @@ async def forward_to_user(message: types.Message):
         f"Message received: {message.text} from {message.from_user.username} in {message.chat.username}"
     )
     # Check if the message is from the specific chat username
-    if message.chat.username != TOP_CHAT_USERNAME:
+    if message.chat.username != GROUP_USERNAME:
         return  # Ignore message if it's not from the specific chat username
 
     # Check if the message is from a bot
