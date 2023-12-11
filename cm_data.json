@@ -1,0 +1,26 @@
+{
+    "cms": {
+        "jaguars": {
+            "vos": {
+                "shift": "green",
+                "username": "defiants_vos"
+            },
+            "sophie": {
+                "shift": "blue",
+                "username": "defiants_sophie"
+            },
+            "sag": {
+                "shift": "yellow",
+                "username": "defiants_sag"
+            },
+            "ivan": {
+                "shift": "purple",
+                "username": "defiants_ivan"
+            },
+            "uzor": {
+                "shift": "red",
+                "username": "defiants_uzor"
+            }
+        }
+    }
+}
